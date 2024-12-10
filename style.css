@@ -1,10 +1,12 @@
 /* styles.css */
 :root {
-  --primary-color: #5a67d8;
+  --primary-color: #6c63ff;
   --secondary-color: #48bb78;
-  --background-color: #ffffff;
-  --text-color: #2d3748;
-  --font-family: 'Arial', sans-serif;
+  --background-color: #f9f9f9;
+  --text-color: #333333;
+  --border-color: #e0e0e0;
+  --font-family: 'Inter', sans-serif;
+  --button-hover: #574bff;
 }
 
 * {
@@ -17,47 +19,45 @@ body {
   font-family: var(--font-family);
   background-color: var(--background-color);
   color: var(--text-color);
-  line-height: 1.6;
-  padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  text-align: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
 }
 
 header {
+  text-align: center;
   margin-bottom: 30px;
 }
 
 header h1 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
+  font-weight: bold;
   color: var(--primary-color);
 }
 
 header p {
   font-size: 1.2rem;
+  color: var(--text-color);
 }
 
-#generator {
+main {
   width: 100%;
-  max-width: 500px;
-  margin-bottom: 30px;
+  max-width: 600px;
+  background: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-button {
-  background-color: var(--primary-color);
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  font-size: 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-button:hover {
-  background-color: var(--secondary-color);
+main h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: var(--text-color);
+  text-align: center;
 }
 
 #checkboxes {
@@ -65,20 +65,58 @@ button:hover {
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-  margin: 20px 0;
+  margin-bottom: 20px;
+}
+
+#checkboxes label {
+  font-size: 1.1rem;
+  cursor: pointer;
+  background: var(--background-color);
+  padding: 10px 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s;
+}
+
+#checkboxes label:hover {
+  background: var(--secondary-color);
+  color: #fff;
+}
+
+button {
+  width: 100%;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 15px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--button-hover);
+}
+
+#results {
+  margin-top: 20px;
 }
 
 .password {
-  margin-top: 10px;
-  font-family: monospace;
-  padding: 10px;
-  border: 1px solid var(--primary-color);
-  border-radius: 5px;
   background: var(--background-color);
+  padding: 10px 15px;
+  margin: 10px 0;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  font-family: monospace;
+  font-size: 1rem;
 }
 
 footer {
-  font-size: 0.8rem;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.9rem;
   color: var(--text-color);
-  margin-top: 20px;
 }
