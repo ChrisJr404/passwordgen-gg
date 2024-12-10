@@ -1,27 +1,146 @@
-/* Extend Stellar's existing styles */
-#checkboxes label {
-  font-size: 1.1rem;
-  margin: 10px;
-  display: inline-block;
-  cursor: pointer;
+/* styles.css */
+:root {
+  --primary-color: #6c63ff;
+  --secondary-color: #48bb78;
+  --background-gradient: linear-gradient(135deg, #6c63ff, #48bb78);
+  --text-color: #333333;
+  --card-bg: #ffffff;
+  --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  --font-family: 'Inter', sans-serif;
 }
 
-.password {
-  margin-top: 15px;
-  font-family: monospace;
-  background: #f9f9f9;
-  padding: 10px 15px;
-  border-radius: 8px;
+body {
+  font-family: var(--font-family);
+  background: var(--background-gradient);
+  color: var(--text-color);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+header {
+  padding: 50px 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+main {
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 15px;
+  box-shadow: var(--box-shadow);
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.password-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  padding: 10px;
   border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #f9f9f9;
 }
 
-.button.primary {
-  background-color: var(--primary-color);
-  color: white;
+.password-box input {
+  font-family: monospace;
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+.password-box button {
+  margin-left: 10px;
   padding: 10px 20px;
+  background: var(--secondary-color);
+  color: #fff;
+  border: none;
   border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.button.primary:hover {
-  background-color: var(--secondary-color);
+.password-box button:hover {
+  background: #3fa566;
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.options label {
+  padding: 10px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.options label:hover {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+button.generate-btn {
+  width: 100%;
+  padding: 15px;
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button.generate-btn:hover {
+  background: #574bff;
+}
+
+#faq h3 {
+  font-size: 1.2rem;
+  margin-top: 15px;
+  color: var(--primary-color);
+}
+
+footer {
+  margin-top: 20px;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: #fff;
+  text-align: center;
 }
