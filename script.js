@@ -43,9 +43,13 @@ function copyToClipboard() {
     .then(() => {
       alert("Password copied to clipboard!");
     })
+    .catch(() => {
+      alert("Failed to copy password. Please try again.");
+    });
 }
 
-// Event Listeners
+// Ensure event listeners are only attached once
 document.getElementById("passwordLength").addEventListener("input", updateLengthValue);
 document.getElementById("generateBtn").addEventListener("click", generatePassword);
-document.querySelector(".copy-btn").addEventListener("click", copyToClipboard);
+document.querySelector(".copy-btn").removeEventListener("click", copyToClipboard); // Remove any existing listener
+document.querySelector(".copy-btn").addEventListener("click", copyToClipboard);   // Attach the listener
