@@ -3,69 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="PasswordGen.gg | Create secure passwords with a modern, user-friendly interface.">
-  <meta name="keywords" content="password generator, secure passwords, online security, PasswordGen.gg">
+  <meta name="description" content="PasswordGen.gg | Generate secure, strong, and random passwords instantly with a sleek, modern design.">
+  <meta name="keywords" content="password generator, secure passwords, online security, strong passwords, PasswordGen.gg">
   <meta name="author" content="PasswordGen.gg">
   <title>PasswordGen.gg | Secure Password Generator</title>
-  <link rel="stylesheet" href="assets/css/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="is-preload">
+<body>
   <!-- Header -->
-  <header id="header">
+  <header>
     <h1>PasswordGen.gg</h1>
     <p>The easiest way to create secure, strong passwords.</p>
   </header>
 
   <!-- Main Content -->
-  <main id="main">
-    <section id="generator" class="wrapper style2">
-      <div class="inner">
+  <main>
+    <!-- Password Generator Section -->
+    <section id="generator">
+      <div class="card">
         <h2>Generate Your Password</h2>
-        <div id="checkboxes">
-          <label><input type="checkbox" id="specialChar1" checked> !</label>
-          <label><input type="checkbox" id="specialChar2" checked> @</label>
-          <label><input type="checkbox" id="specialChar3" checked> #</label>
-          <label><input type="checkbox" id="specialChar4" checked> $</label>
-          <label><input type="checkbox" id="specialChar5" checked> %</label>
-          <label><input type="checkbox" id="specialChar6" checked> ^</label>
-          <label><input type="checkbox" id="specialChar7" checked> &</label>
-          <label><input type="checkbox" id="specialChar8" checked> *</label>
+        <!-- Password Display -->
+        <div class="password-box">
+          <input id="generatedPassword" type="text" readonly value="YourPasswordHere123!">
+          <button class="copy-btn" onclick="copyToClipboard()">Copy</button>
         </div>
-        <button id="generateBtn" class="button primary">Generate Passwords</button>
-        <div id="results">
-          <div class="password" id="password8"><strong>8-Char:</strong> <span></span></div>
-          <div class="password" id="password16"><strong>16-Char:</strong> <span></span></div>
-          <div class="password" id="password32"><strong>32-Char:</strong> <span></span></div>
-          <div class="password" id="password64"><strong>64-Char:</strong> <span></span></div>
+
+        <!-- Customization Options -->
+        <div class="options">
+          <label><input type="checkbox" id="includeUppercase" checked> Uppercase (A-Z)</label>
+          <label><input type="checkbox" id="includeLowercase" checked> Lowercase (a-z)</label>
+          <label><input type="checkbox" id="includeNumbers" checked> Numbers (0-9)</label>
+          <label><input type="checkbox" id="includeSymbols" checked> Symbols (!@#$%^&*)</label>
         </div>
+
+        <!-- Password Length Slider -->
+        <div class="slider">
+          <label for="passwordLength">Password Length: <span id="lengthValue">16</span></label>
+          <input type="range" id="passwordLength" min="8" max="64" value="16" oninput="updateLengthValue()">
+        </div>
+
+        <!-- Generate Button -->
+        <button id="generateBtn" class="generate-btn">Generate Password</button>
       </div>
     </section>
 
-    <section id="faq" class="wrapper style1">
-      <div class="inner">
+    <!-- FAQ Section -->
+    <section id="faq">
+      <div class="card">
         <h2>Frequently Asked Questions</h2>
         <div>
           <h3>Why use a password generator?</h3>
-          <p>Strong passwords reduce the risk of online account compromise.</p>
+          <p>Strong passwords significantly reduce the risk of account compromise by making them harder to guess or crack.</p>
         </div>
         <div>
           <h3>Are the passwords truly random?</h3>
-          <p>Yes, they are generated using secure algorithms for maximum security.</p>
+          <p>Yes, our passwords are generated using secure algorithms to ensure complete randomness and security.</p>
         </div>
         <div>
           <h3>Can I save the passwords?</h3>
-          <p>You can copy the passwords or use a password manager for storage.</p>
+          <p>You can copy the generated passwords or use a password manager for secure storage.</p>
         </div>
       </div>
     </section>
   </main>
 
   <!-- Footer -->
-  <footer id="footer">
+  <footer>
     <p>&copy; 2024 PasswordGen.gg. Designed with simplicity in mind.</p>
   </footer>
 
-  <script src="assets/js/main.js"></script>
+  <!-- JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
