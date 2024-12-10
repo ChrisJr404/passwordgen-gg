@@ -1,122 +1,27 @@
-/* styles.css */
-:root {
-  --primary-color: #6c63ff;
-  --secondary-color: #48bb78;
-  --background-gradient: linear-gradient(135deg, #f5f7fa, #c3cfe2);
-  --text-color: #333333;
-  --font-family: 'Inter', sans-serif;
-  --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-body {
-  font-family: var(--font-family);
-  background: var(--background-gradient);
-  color: var(--text-color);
-  line-height: 1.6;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-  min-height: 100vh;
-}
-
-header {
-  margin-bottom: 40px;
-}
-
-header h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  color: var(--primary-color);
-}
-
-header p {
-  font-size: 1.3rem;
-}
-
-main {
-  width: 100%;
-  max-width: 700px;
-  background: #fff;
-  border-radius: 15px;
-  box-shadow: var(--box-shadow);
-  padding: 20px;
-}
-
-main h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-#checkboxes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  margin-bottom: 20px;
-}
-
+/* Extend Stellar's existing styles */
 #checkboxes label {
-  font-size: 1rem;
-  background: #f9f9f9;
-  border: 1px solid #ddd;
-  padding: 10px 15px;
-  border-radius: 8px;
+  font-size: 1.1rem;
+  margin: 10px;
+  display: inline-block;
   cursor: pointer;
-  transition: all 0.3s;
-}
-
-#checkboxes label:hover {
-  background: var(--secondary-color);
-  color: #fff;
-}
-
-button {
-  background: var(--primary-color);
-  color: #fff;
-  border: none;
-  padding: 15px 20px;
-  font-size: 1.2rem;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-button:hover {
-  background: #574bff;
-}
-
-#results {
-  margin-top: 20px;
 }
 
 .password {
-  margin: 10px 0;
-  padding: 10px;
-  border-radius: 8px;
-  background: #f9f9f9;
+  margin-top: 15px;
   font-family: monospace;
+  background: #f9f9f9;
+  padding: 10px 15px;
+  border-radius: 8px;
   border: 1px solid #ddd;
 }
 
-#faq {
-  margin-top: 40px;
+.button.primary {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
 }
 
-#faq h2 {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-}
-
-#faq h3 {
-  font-size: 1.2rem;
-  margin-top: 15px;
-  color: var(--primary-color);
-}
-
-footer {
-  margin-top: 20px;
-  font-size: 0.9rem;
-  color: #555;
+.button.primary:hover {
+  background-color: var(--secondary-color);
 }
