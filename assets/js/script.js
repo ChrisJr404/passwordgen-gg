@@ -38,14 +38,10 @@ function copyToClipboard() {
   const passwordField = document.getElementById("generatedPassword");
   const password = passwordField.value;
 
-  // Use the Clipboard API to copy the password
-  navigator.clipboard.writeText(password)
-    .then(() => {
-      alert("Password copied to clipboard!");
-    })
-    .catch(() => {
-      alert("Failed to copy password. Please try again.");
-    });
+  // Use the Clipboard API to copy the password (silent operation)
+  navigator.clipboard.writeText(password).catch(() => {
+    console.error("Failed to copy password to clipboard.");
+  });
 }
 
 // Event Listeners
