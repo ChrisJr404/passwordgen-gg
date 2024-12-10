@@ -2,27 +2,36 @@
 :root {
   --primary-color: #6c63ff;
   --secondary-color: #48bb78;
-  --background-color: #f5f6fa;
-  --text-color: #333;
+  --background-gradient: linear-gradient(to right, #6c63ff, #48bb78);
+  --card-bg: #ffffff;
+  --text-color: #333333;
   --font-family: 'Inter', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: var(--font-family);
-  background: var(--background-color);
-  margin: 0;
-  padding: 20px;
+  background: var(--background-gradient);
   color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 }
 
-header .hero {
+header {
   text-align: center;
-  padding: 20px 0;
+  color: #ffffff;
+  margin-bottom: 30px;
 }
 
 header h1 {
-  font-size: 2.8rem;
-  color: var(--primary-color);
+  font-size: 3rem;
 }
 
 header p {
@@ -30,17 +39,22 @@ header p {
 }
 
 main {
+  width: 100%;
   max-width: 700px;
-  margin: 20px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-main h2 {
+.card {
+  background: var(--card-bg);
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+h2 {
   font-size: 1.8rem;
   color: var(--primary-color);
+  margin-bottom: 20px;
   text-align: center;
 }
 
@@ -48,12 +62,12 @@ main h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px 0;
+  margin-bottom: 20px;
 }
 
 .password-box input {
   font-family: monospace;
-  width: 80%;
+  width: 70%;
   padding: 10px;
   font-size: 1.2rem;
   border: 2px solid #ddd;
@@ -61,13 +75,18 @@ main h2 {
 }
 
 .copy-btn {
-  padding: 10px 20px;
-  background: var(--primary-color);
-  color: #fff;
+  padding: 10px 15px;
+  margin-left: 10px;
+  background: var(--secondary-color);
+  color: #ffffff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-left: 10px;
+  transition: background-color 0.3s;
+}
+
+.copy-btn:hover {
+  background-color: #3fa566;
 }
 
 .options label {
@@ -77,23 +96,28 @@ main h2 {
 
 .slider {
   margin: 20px 0;
-  text-align: center;
 }
 
 .generate-btn {
   display: block;
   width: 100%;
   padding: 15px;
+  background: var(--primary-color);
+  color: #ffffff;
   font-size: 1.2rem;
-  color: #fff;
-  background: var(--secondary-color);
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.generate-btn:hover {
+  background: #574bff;
 }
 
 footer {
   text-align: center;
   margin-top: 20px;
-  color: #666;
+  color: #ffffff;
+  font-size: 0.9rem;
 }
