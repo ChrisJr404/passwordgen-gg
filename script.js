@@ -43,9 +43,6 @@ function copyToClipboard() {
     .then(() => {
       alert("Password copied to clipboard!");
     })
-    .catch(() => {
-      alert("Failed to copy password. Please try again.");
-    });
 }
 
 // Event Listeners
