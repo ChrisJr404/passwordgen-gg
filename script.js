@@ -48,8 +48,7 @@ function copyToClipboard() {
     });
 }
 
-// Ensure event listeners are only attached once
+// Event Listeners
 document.getElementById("passwordLength").addEventListener("input", updateLengthValue);
 document.getElementById("generateBtn").addEventListener("click", generatePassword);
-document.querySelector(".copy-btn").removeEventListener("click", copyToClipboard); // Remove any existing listener
-document.querySelector(".copy-btn").addEventListener("click", copyToClipboard);   // Attach the listener
+document.querySelector(".copy-btn").addEventListener("click", copyToClipboard); // Attach the listener only once
