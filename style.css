@@ -2,61 +2,37 @@
 :root {
   --primary-color: #6c63ff;
   --secondary-color: #48bb78;
-  --background-gradient: linear-gradient(to right, #6c63ff, #48bb78);
-  --text-color: #333;
-  --light-color: #f9f9f9;
-  --font-family: 'Poppins', sans-serif;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  --background-gradient: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  --text-color: #333333;
+  --font-family: 'Inter', sans-serif;
+  --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 body {
   font-family: var(--font-family);
   background: var(--background-gradient);
   color: var(--text-color);
+  line-height: 1.6;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   padding: 20px;
+  min-height: 100vh;
 }
 
-header .hero {
-  padding: 50px 20px;
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+header {
+  margin-bottom: 40px;
 }
 
 header h1 {
   font-size: 3rem;
   font-weight: bold;
   color: var(--primary-color);
-  margin-bottom: 10px;
 }
 
 header p {
   font-size: 1.3rem;
-  margin-bottom: 20px;
-}
-
-.cta {
-  padding: 15px 25px;
-  font-size: 1rem;
-  background-color: var(--secondary-color);
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.cta:hover {
-  background-color: #3fa566;
 }
 
 main {
@@ -64,64 +40,79 @@ main {
   max-width: 700px;
   background: #fff;
   border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--box-shadow);
   padding: 20px;
-  margin-top: 30px;
 }
 
 main h2 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   margin-bottom: 20px;
-  color: var(--primary-color);
 }
 
 #checkboxes {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
+  gap: 15px;
   margin-bottom: 20px;
 }
 
 #checkboxes label {
-  background: var(--light-color);
+  font-size: 1rem;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
   padding: 10px 15px;
   border-radius: 8px;
-  border: 1px solid #ddd;
   cursor: pointer;
   transition: all 0.3s;
 }
 
 #checkboxes label:hover {
-  background: var(--primary-color);
+  background: var(--secondary-color);
   color: #fff;
 }
 
-.primary-btn {
+button {
   background: var(--primary-color);
   color: #fff;
-  padding: 15px 25px;
   border: none;
-  border-radius: 5px;
+  padding: 15px 20px;
+  font-size: 1.2rem;
+  border-radius: 10px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background 0.3s;
 }
 
-.primary-btn:hover {
-  background-color: #574bff;
+button:hover {
+  background: #574bff;
+}
+
+#results {
+  margin-top: 20px;
 }
 
 .password {
-  background: var(--light-color);
+  margin: 10px 0;
   padding: 10px;
   border-radius: 8px;
-  margin: 10px 0;
+  background: #f9f9f9;
   font-family: monospace;
   border: 1px solid #ddd;
 }
 
 #faq {
-  margin-top: 30px;
+  margin-top: 40px;
+}
+
+#faq h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+#faq h3 {
+  font-size: 1.2rem;
+  margin-top: 15px;
+  color: var(--primary-color);
 }
 
 footer {
