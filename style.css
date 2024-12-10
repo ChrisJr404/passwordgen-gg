@@ -1,0 +1,84 @@
+/* styles.css */
+:root {
+  --primary-color: #5a67d8;
+  --secondary-color: #48bb78;
+  --background-color: #ffffff;
+  --text-color: #2d3748;
+  --font-family: 'Arial', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+header {
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+}
+
+header p {
+  font-size: 1.2rem;
+}
+
+#generator {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 30px;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+}
+
+#checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.password {
+  margin-top: 10px;
+  font-family: monospace;
+  padding: 10px;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  background: var(--background-color);
+}
+
+footer {
+  font-size: 0.8rem;
+  color: var(--text-color);
+  margin-top: 20px;
+}
