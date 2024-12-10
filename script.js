@@ -36,11 +36,16 @@ function generatePassword() {
 // Function to copy the generated password to the clipboard
 function copyToClipboard() {
   const passwordField = document.getElementById("generatedPassword");
-  passwordField.select();
-  passwordField.setSelectionRange(0, 99999); // For mobile devices
-  navigator.clipboard.writeText(passwordField.value)
-    .then(() => alert("Password copied to clipboard!"))
-    .catch(() => alert("Failed to copy password."));
+  const password = passwordField.value;
+
+  // Use the Clipboard API to copy the password
+  navigator.clipboard.writeText(password)
+    .then(() => {
+      alert("Password copied to clipboard!");
+    })
+    .catch(() => {
+      alert("Failed to copy password. Please try again.");
+    });
 }
 
 // Event Listeners
